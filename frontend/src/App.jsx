@@ -8,6 +8,8 @@ import ResetPassword from "./pages/ResetPassword";
 
 import AuthLayout from "./layouts/AuthLayout";
 import GuestLayout from "./layouts/GuestLayout";
+import Status from "./pages/Status";
+import Paiement from "./pages/Paiement";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route element={<AuthLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/status" element={<Status />} />
+          <Route path="/paiement" element={<Paiement />} />
         </Route>
         <Route element={<GuestLayout />}>
           <Route path="/login" element={<Login />} />

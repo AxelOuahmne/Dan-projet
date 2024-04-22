@@ -30,6 +30,24 @@ const AuthLayout = () => {
                   Home
                 </Link>
               </li>
+              <li>
+              <Link
+                  to="/status"
+                  className="block rounded py-2 pr-4 pl-3 text-white"
+                  aria-current="page"
+                >
+                  Status
+                </Link>
+              </li>
+              <li>
+              <Link
+                  to="/paiement"
+                  className="block rounded py-2 pr-4 pl-3 text-white"
+                  aria-current="page"
+                >
+                  Paiement
+                </Link>
+              </li>
               {user ? (
                 <li>
                   <button
