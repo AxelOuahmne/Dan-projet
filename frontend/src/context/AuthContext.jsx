@@ -1,69 +1,72 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import axios from "../api/axios";
-import { useNavigate } from "react-router-dom";
+import React, { createContext, useState, useEffect } from 'react';
+import axios from 'axios';
 
-const AuthContext = createContext({});
+const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [errors, setErrors] = useState([]);
-  const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+    const [token, setToken] = useState(localStorage.getItem('token'));
 
-  const csrf = () => axios.get("/sanctum/csrf-cookie");
+    useEffect(() => {
+        if (token) {
+            axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+            axios.get('http://127.0.0.1:8000/api/user')
+                .then(response => {
+                    setUser(response.data.data);
+                })
+                .catch(() => {
+                    localStorage.removeItem('token');
+                    setUser(null);
+                });
+        }
+    }, [token]);
 
-  const getUser = async () => {
-    const { data } = await axios.get("/api/user");
-    setUser(data);
-  };
+    const login = async (email, password) => {
+        try {
+            const response = await axios.post('http://127.0.0.1:8000/api/login', { email, password });
+            setToken(response.data.token);
+            localStorage.setItem('token', response.data.token);
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+            const userResponse = await axios.get('http://127.0.0.1:8000/api/user');
+            setUser(userResponse.data.data);
+        } catch (error) {
+            console.error('Failed to login', error);
+        }
+    };
 
-  const login = async ({ ...data }) => {
-    await csrf();
-    setErrors([]);
-    try {
-      await axios.post("/login", data);
-      await getUser();
-      navigate("/");
-    } catch (e) {
-      if (e.response.status === 422) {
-        setErrors(e.response.data.errors);
-      }
-    }
-  };
-  const register = async ({ ...data }) => {
-    await csrf();
-    setErrors([]);
-    try {
-      await axios.post("/register", data);
-      await getUser();
-      navigate("/");
-    } catch (e) {
-      if (e.response.status === 422) {
-        setErrors(e.response.data.errors);
-      }
-    }
-  };
+    const register = async (name, email, password, password_confirmation) => {
+        try {
+            await axios.post('http://127.0.0.1:8000/api/register', {
+                name,
+                email,
+                password,
+                password_confirmation
+            });
+        } catch (error) {
+            console.error('Failed to register', error);
+        }
+    };
 
-  const logout = () => {
-    axios.post("/logout").then(() => {
-      setUser(null);
-    });
-  };
+    const logout = async () => {
+        try {
+            await axios.get('http://127.0.0.1:8000/api/logout');
+            localStorage.removeItem('token');
+            setUser(null);
+            setToken(null);
+        } catch (error) {
+            console.error('Failed to logout', error);
+        }
+    };
 
-  useEffect(() => {
-    if (!user) {
-      getUser();
-    }
-  }, []);
+    const isAuthenticated = () => {
+        return !!user;
+    };
 
-  return (
-    <AuthContext.Provider
-      value={{ user, errors, getUser, login, register, logout, csrf }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider value={{ user, login, register, logout, isAuthenticated }}>
+            {children}
+        </AuthContext.Provider>
+    );
 };
 
-export default function useAuthContext() {
-  return useContext(AuthContext);
-}
+export default AuthContext;
