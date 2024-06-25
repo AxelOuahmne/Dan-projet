@@ -174,7 +174,7 @@ header {
 }
 
 .our-packs .packs-options .pack-option:nth-of-type(1){
-  
+
 }
 .our-packs .packs-options .pack-option:nth-of-type(2){
     border-right: 1px solid #bababa;
@@ -205,7 +205,7 @@ header {
     display: flex;
     min-width: 46%;
     height: 200px;
-    margin: 20px 0;
+    margin: auto;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -248,10 +248,10 @@ header {
 .accompa {
     position: relative;
     top: 100px;
-    height: 550px;
+    height: 460px;
 }
 .accompa .accompa-img{
-    height: 400px;
+    height: 300px;
 }
 .accompa .accompa-img img {
     height: 100%;
@@ -260,7 +260,7 @@ header {
     justify-content: center;
 }
 .accompa .container > div {
-    margin: 0  60px;
+    margin: 0  50px;
 }
 .accompa .accompa-content{
     display: flex;
@@ -550,4 +550,16 @@ footer .footer__bottom .pro__space a span {
   float: left;
   margin-left: 20px;
   text-transform: uppercase;
+}
+/* Ajoutez ce style à votre fichier CSS */
+.testimonials .container {
+    display: flex;
+    justify-content: space-between; /* Ajoute de l'espace entre les colonnes */
+    gap: 20px; /* Ajoute un espace entre les colonnes */
+}
+
+.testimonials .col {
+    flex: 1; /* Les colonnes prennent un espace égal */
+    margin: 10px;
+    padding: 20px;
 }

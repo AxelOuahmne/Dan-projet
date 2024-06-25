@@ -7,8 +7,6 @@
     <list default="true" id="58f62165-1173-4f23-8341-fbcce8c5a5a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/com/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/com/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/com/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/com/NavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +215,7 @@
       <workItem from="1716290330619" duration="1486000" />
       <workItem from="1716491606026" duration="7999000" />
       <workItem from="1719305339979" duration="4443000" />
-      <workItem from="1719314218182" duration="9680000" />
+      <workItem from="1719314218182" duration="12322000" />
     </task>
     <servers />
   </component>

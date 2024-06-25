@@ -188,17 +188,16 @@ function Home() {
             <p style={{textAlign: 'center', marginBottom:'20px'}}>Ne prenez pas seulement notre parole pour acquise. Voici ce que nos utilisateurs satisfaits ont à dire sur leur expérience avec MarketLine.</p>
             <section className="testimonials">
                 <div className="container">
-                        <div className="col">
-                            "Grâce à MarketLine, j'ai pu trouver plusieurs missions de téléprospection en quelques semaines seulement. L'interface est intuitive et j'ai reçu des propositions de qualité." - Sarah M., Téléprospectrice
-                        </div>
-                        <div className="testimonial">
-                            <p>"En tant que régie, nous avons trouvé des commerciaux compétents pour certaines de nos missions. La plateforme nous a permis de cibler nos recherches efficacement." - Jean P., Directeur de Régie</p>
-                        </div>
-
-                        <div className="testimonial">
-                            <p>"MarketLine m'a aidé à publier des offres de commercial dans une entreprise de renom. Le processus de publication et d'échange était simple et rapide." - David L., Commercial</p>
-                        </div>
+                    <div className="testimonial col">
+                        <p>"Grâce à MarketLine, j'ai pu trouver plusieurs missions de téléprospection en quelques semaines seulement. L'interface est intuitive et j'ai reçu des propositions de qualité." </p> <br/> <b> Sarah M. , Téléprospectrice</b>
                     </div>
+                    <div className="testimonial col">
+                        <p>"En tant que régie, nous avons trouvé des commerciaux compétents pour certaines de nos missions. La plateforme nous a permis de cibler nos recherches efficacement." </p> <br/> <b> Jean P. , Directeur de Régie </b>
+                    </div>
+                    <div className="testimonial col">
+                        <p>"MarketLine m'a aidé à publier des offres de commercial dans une entreprise de renom. Le processus de publication et d'échange était simple et rapide." </p> <br/> <b> David L. , Commercial</b>
+                    </div>
+                </div>
             </section>
             <section className="advices">
                 <div className="advices__title">
