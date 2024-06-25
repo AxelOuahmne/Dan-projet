@@ -10,7 +10,7 @@
 
 header {
     background-color: #fff;
-    color: #003250;
+    color: #288ac4;
     padding: 10px 0;
 }
 
@@ -21,6 +21,7 @@ header {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-bottom:40px
 }
 
 .logo h1 {
@@ -78,12 +79,13 @@ header {
 
 .hero h1 {
     font-size: 40px;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 30px;
 }
 
 .hero p {
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 20px 30px;
+    font-style: italic;
 }
 .info-section {
     background-color: #f7f9ff;
@@ -154,13 +156,11 @@ header {
     margin-top: 30px;
 }
 .our-packs .packs-content {
-    height: 600px;
-    background-color: #f7f9ff;
+    height: 300px;
     width: 70%;
     margin: 0 auto;
     position: relative;
     top: 100px;
-    padding: 40px ;
 }
 .our-packs .packs-options{
     display: flex;
@@ -170,11 +170,11 @@ header {
     border-radius: 10px;
     position: relative;
     bottom: 50px;
-    
+    justify-content: space-around; /* Alignement des options avec un espacement autour */
 }
 
 .our-packs .packs-options .pack-option:nth-of-type(1){
-  background-color: #ffd0b6;
+  
 }
 .our-packs .packs-options .pack-option:nth-of-type(2){
     border-right: 1px solid #bababa;
@@ -184,6 +184,13 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Transition pour l'effet de survol */
+    margin: 10px;
+}
+.pack-option:hover {
+    transform: scale(1.05); /* Effet d'agrandissement au survol */
 }
 .our-packs .packs-options .pack-option > div {
     margin: 5px ;
@@ -416,10 +423,10 @@ background-color: #e5f5ff;
 }
 /* start footer  */
 footer .footer__top , footer .footer__center{
-    background-color: #003250;
+    background-color: #288ac4;
 }
 footer .footer__top{
-    height: 700px;
+    height: 400px;
     padding-top: 50px;
 }
 footer .footer__top .container{
@@ -519,11 +526,11 @@ footer .footer__center .groupe__effy  h2{
 }
  /* footer bottom  */
  footer .footer__bottom{
-    background-color: #74f0a7;
+    background-color: #288ac4;
     padding: 20px 0;
  }
 footer .footer__bottom .artisan {
-     color: #003250;
+     color: #288ac4;
 }
 footer .footer__bottom .artisan h2{
     margin-bottom: 10px;
@@ -532,7 +539,7 @@ footer .footer__bottom .pro__space a {
     width: 270px;
     display: inline-block;
     border-radius: 30px;
-    background-color: #003250;
+    background-color: #288ac4;
     padding: 15px 0;
 }
 footer .footer__bottom .pro__space a img {

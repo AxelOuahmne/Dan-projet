@@ -11,13 +11,13 @@ function NavBar() {
     <header>
         <div className="container">
             <div className="logo">
-                <h1>MarketLine</h1>
+                <h1><a href="/"> MarketLine</a></h1>
             </div>
             <nav className="navigation">
                 <ul>
-                    <li><a href="#">Isolation</a></li>
-                    <li><a href="#">Chauffage</a></li>
-                    <li><a href="#">Solaire</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">Déposer une annonce</a></li>
                     {isAuthenticated() ? (
                         <li className="client__space">
                             <a href="#" onClick={logout}>
