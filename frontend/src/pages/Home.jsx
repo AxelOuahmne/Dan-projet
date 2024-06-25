@@ -7,23 +7,23 @@ function Home() {
         <section className="hero">
             <div className="hero-content">
             <div className="hero-content-center">
-                <h1>Votre Plateforme de Connexion pour <br />Téléprospecteurs, Commerciaux et Régies </h1>
-                <p>Trouvez les Meilleurs Talents et Opportunités en Un Seul Endroit</p>
+                <h1>Votre Plateforme de connexion pour <br />Téléprospecteurs, Commerciaux et Régies </h1>
+                <p>Trouvez les meilleurs talents et opportunités en un seul endroit</p>
             </div>
             </div>
             <section className="info-section">
                 <div className="info-container">
                     <div className="info-box">
                         <div className="info-icon"><img src="https://www.effy.fr/chauffage-red.ae153c5c8f554c5c.svg" alt="Icon 1" /></div>
-                        <div className="info-text">changer mon chauffage</div>
+                        <div className="info-text">Téléprospecteurs</div>
                     </div>
                     <div className="info-box">
                         <div className="info-icon"><img src="https://www.effy.fr/isolation-green.26325c5a6e3a30ea.svg" alt="Icon 2" /></div>
-                        <div className="info-text">isoler ma maison</div>
+                        <div className="info-text">Commerciaux</div>
                     </div>
                     <div className="info-box">
                         <div className="info-icon"><img src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 3" /></div>
-                        <div className="info-text">passer au solaire</div>
+                        <div className="info-text">Régies</div>
                     </div>
                     <div className="info-box">
                         <div className="info-icon"><img src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 4" /></div>
@@ -40,23 +40,26 @@ function Home() {
 
         <div className="our-packs">
             <div className="packs-title">
-                <h2>Vous voulez faire des économies d'énergie ?</h2>
-                <p>Nos travaux pour répondre à vos besoins :</p>
+                <h2>Pourquoi Choisir MarketLine ?</h2>
+                <p> Chez MarketLine, nous nous engageons à offrir une expérience utilisateur optimale et des services de haute qualité. Notre objectif est de faciliter les connexions entre téléprospecteurs, commerciaux et régies grâce à une plateforme intuitive et performante.
+
+                </p>
             </div>
             <div className="container">
                 <div className="packs-content">
                     <div className="packs-options">
                         <div className="pack-option">
                             <div className="option-img"><img src="https://www.effy.fr/assets/img/icons/nhp/chauffage_selected.svg" alt="" /></div>
-                            <div className="option-title"><h6>changer mon chauffage</h6></div>
+                            <div className="option-title"><h6>Pour les Téléprospecteurs</h6></div>
                         </div>
                         <div className="pack-option">
                             <div className="option-img"><img src="https://www.effy.fr/assets/img/icons/nhp/isolation_hover.svg" alt="" /></div>
-                            <div className="option-title"><h6>isoler ma maison</h6></div>
+                            <div className="option-title"><h6>Pour les Commerciaux
+                            </h6></div>
                         </div>
                         <div className="pack-option">
                             <div className="option-img"><img src="https://www.effy.fr/assets/img/icons/nhp/solar_hover.svg" alt="" /></div>
-                            <div className="option-title"><h6>passe au salaire</h6></div>
+                            <div className="option-title"><h6>Pour les Régies</h6></div>
                         </div>
                     </div>
                     <div className="option-container">
@@ -129,34 +132,35 @@ function Home() {
                     <div className="accompa-item">
                         <div className="accompa-icon"><img src="https://www.effy.fr/assets/img/backgrounds/icon_argu1.svg" alt="" /></div>
                         <div className="accompa-desc">
-                            <h2>Des conseillers à votre écoute</h2>
-                            <p>Disponibles du lundi au vendredi de 8h à 19h. </p>
+                            <h3>Facilité d'utilisation</h3>
+                            <p style={{ fontSize: '15px' }}>Interface intuitive pour publier et trouver des annonces </p>
                         </div>
                     </div>
                     <div className="accompa-item">
                         <div className="accompa-icon"><img src="https://www.effy.fr/assets/img/backgrounds/icon_argu4.svg" alt="" /></div>
                         <div className="accompa-desc">
-                            <h2>Des conseillers à votre écoute</h2>
-                            <p>Disponibles du lundi au vendredi de 8h à 19h. </p>
+                            <h3>Sécurité et confidentialité</h3>
+                            <p style={{ fontSize: '15px' }}>Vos données sont protégées et traitées en toute confidentialité.</p>
                         </div>
                     </div>
                     <div className="accompa-item">
                         <div className="accompa-icon"><img src="https://www.effy.fr/assets/img/backgrounds/icon_argu3.svg" alt="" /></div>
                         <div className="accompa-desc">
-                            <h2>Des conseillers à votre écoute</h2>
-                            <p>Disponibles du lundi au vendredi de 8h à 19h. </p>
+                            <h3>Réseau élargi</h3>
+                            <p style={{ fontSize: '15px' }}>Connectez-vous avec des professionnels et des entreprises de divers secteurs.</p>
                         </div>
                     </div>
                     <div className="accompa-item">
                         <div className="accompa-icon"><img src="https://www.effy.fr/assets/img/backgrounds/icon_argu2.svg" alt="" /></div>
                         <div className="accompa-desc">
-                            <h2>Des conseillers à votre écoute</h2>
-                            <p>Disponibles du lundi au vendredi de 8h à 19h. </p>
+                            <h3>Service rapide et efficace</h3>
+                            <p style={{ fontSize: '15px' }}>Trouvez rapidement les talents ou les opportunités dont vous avez besoin.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section className="simplifier">
             <div className="container">
                 <div className="simplifier-content">
@@ -165,25 +169,8 @@ function Home() {
                     <p>Vous l’avez compris, chez Effy nous avons à cœur de rendre simples et accessibles les travaux de rénovation énergétique pour tous les Français.​</p>
                     <p>Mais la rénovation énergétique, finalement, c’est quoi ? Pour décrypter tous ces sujets, nous avons réalisé des courtes vidéos avec Jamy Gourmaud ! L’as de la pédagogie. Pour en savoir plus sur notre collaboration et découvrir toutes les vidéos, accédez à notre page en cliquant ici.</p>
                 </div>
-                 <div className="simplifier-img">
+                <div className="simplifier-img">
                     <img src="https://www.effy.fr/assets/corps/jamy.webp" alt="" />
-                 </div>
-            </div>
-            <div className="container cards-container">
-                <div className="simplifier-card">
-                    <div className="simplifier-card-img"><img src="https://www.effy.fr/assets/nhp/card-3-jamy.webp" alt="" /></div>
-                    <h3>Comment fonctionne une pompe à chaleur ?</h3>
-                    <p>Jamy et Philippe vous montrent comment la pompe à chaleur fait baisser votre facture énergétique.</p>
-                </div>
-                <div className="simplifier-card">
-                    <div className="simplifier-card-img"><img src="https://www.effy.fr/assets/nhp/card-3-jamy.webp" alt="" /></div>
-                    <h3>Comment fonctionne une pompe à chaleur ?</h3>
-                    <p>Jamy et Philippe vous montrent comment la pompe à chaleur fait baisser votre facture énergétique.</p>
-                </div>
-                <div className="simplifier-card">
-                    <div className="simplifier-card-img"><img src="https://www.effy.fr/assets/nhp/card-3-jamy.webp" alt="" /></div>
-                    <h3>Comment fonctionne une pompe à chaleur ?</h3>
-                    <p>Jamy et Philippe vous montrent comment la pompe à chaleur fait baisser votre facture énergétique.</p>
                 </div>
             </div>
         </section>

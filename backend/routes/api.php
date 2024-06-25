@@ -30,4 +30,4 @@ Route::controller(AuthController::class)->group(function(){
     Route::get('user','getUserDetail');
     Route::get('logout','logout');
 
-})->middleware('auth:api');
+})->middleware('auth:sanctum');
