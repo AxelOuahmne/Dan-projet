@@ -28,6 +28,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/src/assets/styles.css" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/pages/Home.jsx" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -215,7 +219,7 @@
       <workItem from="1716290330619" duration="1486000" />
       <workItem from="1716491606026" duration="7999000" />
       <workItem from="1719305339979" duration="4443000" />
-      <workItem from="1719314218182" duration="12322000" />
+      <workItem from="1719314218182" duration="16512000" />
     </task>
     <servers />
   </component>

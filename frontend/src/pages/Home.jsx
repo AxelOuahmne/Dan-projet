@@ -1,14 +1,22 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 function Home() {
     const [content, setContent] = useState({
-        heading: '',
-        text: '',
-        benefits: [],
-        cta: ''
+        heading: 'Nouvelles Opportunités pour Téléprospecteurs',
+        text: 'Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences. Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.',
+        benefits: [
+            'Accès Rapide aux Offres : Des nouvelles missions publiées quotidiennement.',
+            'Visibilité Maximale : Un profil optimisé pour attirer les recruteurs.',
+            'Évaluations et Commentaires : Construisez votre réputation avec des retours d’expériences.'
+        ],
+        cta: 'Inscrivez-vous maintenant et trouvez votre prochaine mission !'
     });
 
+    const [selectedOption, setSelectedOption] = useState('teleprospecteurs');
+
     const handleTeleprospecteursClick = () => {
+        setSelectedOption('teleprospecteurs');
         setContent({
             heading: 'Nouvelles Opportunités pour Téléprospecteurs',
             text: 'Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences. Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.',
@@ -22,6 +30,7 @@ function Home() {
     };
 
     const handleCommerciauxClick = () => {
+        setSelectedOption('commerciaux');
         setContent({
             heading: 'Avancez dans Votre Carrière Commerciale',
             text: 'En tant que commercial, vos compétences sont recherchées. Notre plateforme vous aide à trouver des missions qui correspondent à votre profil et à vos aspirations. Commencez à postuler à des offres dès aujourd\'hui.',
@@ -35,6 +44,7 @@ function Home() {
     };
 
     const handleRegiesClick = () => {
+        setSelectedOption('regies');
         setContent({
             heading: 'Trouvez les Meilleurs Talents',
             text: 'Les régies peuvent recruter les meilleurs téléprospecteurs et commerciaux grâce à notre plateforme. Publiez vos annonces et accédez à un large éventail de profils qualifiés. Utilisez nos outils pour affiner vos recherches et trouver les missions idéales.',
@@ -52,7 +62,7 @@ function Home() {
             <section className="hero">
                 <div className="hero-content">
                     <div className="hero-content-center">
-                        <h1>Votre Plateforme de connexion pour <br/>Téléprospecteurs, Commerciaux et Régies </h1>
+                        <h1>Votre Plateforme de connexion pour <br />Téléprospecteurs, Commerciaux et Régies </h1>
                         <p>Trouvez les meilleurs talents et opportunités en un seul endroit</p>
                     </div>
                 </div>
@@ -60,27 +70,27 @@ function Home() {
                     <div className="info-container">
                         <div className="info-box">
                             <div className="info-icon"><img src="https://www.effy.fr/chauffage-red.ae153c5c8f554c5c.svg"
-                                                            alt="Icon 1"/></div>
+                                                            alt="Icon 1" /></div>
                             <div className="info-text">Téléprospecteurs</div>
                         </div>
                         <div className="info-box">
                             <div className="info-icon"><img
-                                src="https://www.effy.fr/isolation-green.26325c5a6e3a30ea.svg" alt="Icon 2"/></div>
+                                src="https://www.effy.fr/isolation-green.26325c5a6e3a30ea.svg" alt="Icon 2" /></div>
                             <div className="info-text">Commerciaux</div>
                         </div>
                         <div className="info-box">
                             <div className="info-icon"><img
-                                src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 3"/></div>
+                                src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 3" /></div>
                             <div className="info-text">Régies</div>
                         </div>
                         <div className="info-box">
                             <div className="info-icon"><img
-                                src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 4"/></div>
+                                src="https://www.effy.fr/solar_no-hover.072b41991276b450.svg" alt="Icon 4" /></div>
                             <div className="info-text">calculer primes & aides</div>
                         </div>
                         <div className="info-box">
                             <div className="info-icon">
-                                <img src="https://www.effy.fr/travaux-purple.18febcebbc4115ea.svg" alt="Icon 5"/></div>
+                                <img src="https://www.effy.fr/travaux-purple.18febcebbc4115ea.svg" alt="Icon 5" /></div>
                             <div className="info-text">quels travaux realiser</div>
                         </div>
                     </div>
@@ -90,7 +100,7 @@ function Home() {
             <div className="our-packs">
                 <div className="packs-title">
                     <h1>Pourquoi choisir MarketLine ?</h1>
-                    <p style={{marginTop: '20px', fontSize: '18px'}}> Chez MarketLine, nous nous engageons à offrir une
+                    <p style={{ marginTop: '20px', fontSize: '18px' }}> Chez MarketLine, nous nous engageons à offrir une
                         expérience utilisateur optimale et des services de haute qualité. Notre objectif est de
                         faciliter les connexions entre téléprospecteurs, commerciaux et régies grâce à une plateforme
                         intuitive et performante.
@@ -99,19 +109,19 @@ function Home() {
                 <div className="container">
                     <div className="packs-content">
                         <div className="packs-options">
-                            <div className="pack-option" onClick={handleTeleprospecteursClick}>
+                            <div className={`pack-option ${selectedOption === 'teleprospecteurs' ? 'selected' : ''}`} onClick={handleTeleprospecteursClick}>
                                 <div className="option-img"><img
-                                    src="https://www.effy.fr/assets/img/icons/nhp/chauffage_selected.svg" alt=""/></div>
+                                    src="https://www.effy.fr/assets/img/icons/nhp/chauffage_selected.svg" alt="" /></div>
                                 <div className="option-title"><h6>Pour les Téléprospecteurs</h6></div>
                             </div>
-                            <div className="pack-option" onClick={handleCommerciauxClick}>
+                            <div className={`pack-option ${selectedOption === 'commerciaux' ? 'selected' : ''}`} onClick={handleCommerciauxClick}>
                                 <div className="option-img"><img
-                                    src="https://www.effy.fr/assets/img/icons/nhp/isolation_hover.svg" alt=""/></div>
+                                    src="https://www.effy.fr/assets/img/icons/nhp/isolation_hover.svg" alt="" /></div>
                                 <div className="option-title"><h6>Pour les Commerciaux</h6></div>
                             </div>
-                            <div className="pack-option" onClick={handleRegiesClick}>
+                            <div className={`pack-option ${selectedOption === 'regies' ? 'selected' : ''}`} onClick={handleRegiesClick}>
                                 <div className="option-img"><img
-                                    src="https://www.effy.fr/assets/img/icons/nhp/solar_hover.svg" alt=""/></div>
+                                    src="https://www.effy.fr/assets/img/icons/nhp/solar_hover.svg" alt="" /></div>
                                 <div className="option-title"><h6>Pour les Régies</h6></div>
                             </div>
                         </div>
@@ -126,11 +136,10 @@ function Home() {
                                                 <li key={index}>{benefit}</li>
                                             ))}
                                         </ul>
-                                        <a href="#">{content.cta}</a>
+                                        <a href="/register">{content.cta}</a>
                                     </div>
                                 </div>
                             </div>
-                            {/* Répétez la structure de la div "option" si nécessaire */}
                         </div>
                     </div>
                 </div>
@@ -184,21 +193,22 @@ function Home() {
                 </div>
             </section>
 
-            <h2 style={{textAlign: 'center', marginBottom:'10px'}}> Ce que nos utilisateurs disent de nous</h2>
-            <p style={{textAlign: 'center', marginBottom:'20px'}}>Ne prenez pas seulement notre parole pour acquise. Voici ce que nos utilisateurs satisfaits ont à dire sur leur expérience avec MarketLine.</p>
             <section className="testimonials">
-                <div className="container">
-                    <div className="testimonial col">
-                        <p>"Grâce à MarketLine, j'ai pu trouver plusieurs missions de téléprospection en quelques semaines seulement. L'interface est intuitive et j'ai reçu des propositions de qualité." </p> <br/> <b> Sarah M. , Téléprospectrice</b>
+                <h2 style={{textAlign: 'center', marginBottom:'10px'}}> Ce que nos utilisateurs disent de nous</h2>
+                <p style={{textAlign: 'center', marginBottom:'20px'}}>Ne prenez pas seulement notre parole pour acquise. Voici ce que nos utilisateurs satisfaits ont à dire sur leur expérience avec MarketLine.</p>
+                    <div className="container">
+                        <div className="testimonial col">
+                            <p style={{fontStyle: 'italic'}}>"Grâce à MarketLine, j'ai pu trouver plusieurs missions de téléprospection en quelques semaines seulement. L'interface est intuitive et j'ai reçu des propositions de qualité." </p> <br/> <b> Sarah M. , Téléprospectrice</b>
+                        </div>
+                        <div className="testimonial col">
+                            <p style={{fontStyle: 'italic'}}>"En tant que régie, nous avons trouvé des commerciaux compétents pour certaines de nos missions. La plateforme nous a permis de cibler nos recherches efficacement." </p> <br/> <b> Jean P. , Directeur de Régie </b>
+                        </div>
+                        <div className="testimonial col">
+                            <p style={{fontStyle: 'italic'}}>"MarketLine m'a aidé à publier des offres de commercial dans une entreprise de renom. Le processus de publication et d'échange était simple et rapide." </p> <br/> <b> David L. , Commercial</b>
+                        </div>
                     </div>
-                    <div className="testimonial col">
-                        <p>"En tant que régie, nous avons trouvé des commerciaux compétents pour certaines de nos missions. La plateforme nous a permis de cibler nos recherches efficacement." </p> <br/> <b> Jean P. , Directeur de Régie </b>
-                    </div>
-                    <div className="testimonial col">
-                        <p>"MarketLine m'a aidé à publier des offres de commercial dans une entreprise de renom. Le processus de publication et d'échange était simple et rapide." </p> <br/> <b> David L. , Commercial</b>
-                    </div>
-                </div>
             </section>
+
             <section className="advices">
                 <div className="advices__title">
                     <h1>Nos étapes et astuces avec notre <br/> plateforme </h1>
