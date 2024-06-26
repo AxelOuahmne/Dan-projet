@@ -6,7 +6,9 @@
     text-decoration: none;
     list-style: none;
 }
-
+.title:visited {
+    color: #003250;
+}
 
 header {
     background-color: #fff;
@@ -65,11 +67,11 @@ header {
 }
 
 .hero {
-    background-image: url('https://www.effy.fr/hp-cover-w1600.8d1845432ca02f8c.webp');
+    background-image: url('https://img.freepik.com/photos-premium/construire-panneaux-solaires-toit-energie-durable-propre-maison_75891-3769.jpg?w=1060');
     background-size: cover;
-    height: 600px;
+    height: 650px;
     position: relative;
-    background-position: center center;
+    background-position: center;
 }
 .hero-content .hero-content-center {
     position: absolute;
@@ -163,6 +165,9 @@ header {
     width: 90%;
     margin: 0 auto;
 }
+.packs-title h1{
+    color:#003250;
+}
 /*
 .our-packs .packs-options {
     display: flex;
@@ -251,7 +256,7 @@ header {
 
 .accompa {
     position: relative;
-    top: 140px;
+    top: 185px;
     height: 460px;
 }
 .accompa .accompa-img{
@@ -361,6 +366,9 @@ background-color: #e5f5ff;
     background-color: #f3faec;
     background-image: url('https://www.effy.fr/assets/img/backgrounds/home-carousel-card-4.svg');
 }
+.advices h1{
+    color: #003250;
+}
 /* start news feed  */
 .news__feed {
     background-color: #f7f9ff;
@@ -427,7 +435,7 @@ background-color: #e5f5ff;
 }
 /* start footer  */
 footer .footer__top , footer .footer__center{
-    background-color: #288ac4;
+    background-color: #49ACE8;
 }
 footer .footer__top{
     height: 400px;
@@ -568,8 +576,10 @@ footer .footer__bottom .pro__space a span {
 }
 .testimonials{
     background-color: #49ace8;
-    padding: 55px 55px 10px;
+    padding: 45px 55px 10px;
     color: #fff;
+    margin-top: 8%;
+    margin-bottom: 3%;
 }
 .packs-options {
     display: flex;
@@ -600,7 +610,7 @@ footer .footer__bottom .pro__space a span {
 
 .option-title h6 {
     font-size: 18px;
-    color: #333;
+    color: #003250;
 }
 
 .option-container {
@@ -621,6 +631,7 @@ footer .footer__bottom .pro__space a span {
 .option-desc h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    color:#003250;
 }
 
 .option-desc p {
@@ -642,7 +653,7 @@ footer .footer__bottom .pro__space a span {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color:#49ACE8 ;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;

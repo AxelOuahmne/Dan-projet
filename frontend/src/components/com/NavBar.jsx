@@ -11,7 +11,7 @@ function NavBar() {
     <header>
         <div className="container">
             <div className="logo">
-                <h1><a href="/"> MarketLine</a></h1>
+                <h1><a className="title" href="/"> MarketLine</a></h1>
             </div>
             <nav className="navigation">
                 <ul>

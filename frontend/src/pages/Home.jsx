@@ -3,12 +3,17 @@ import React, { useState } from 'react';
 
 function Home() {
     const [content, setContent] = useState({
-        heading: 'Nouvelles Opportunités pour Téléprospecteurs',
-        text: 'Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences. Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.',
+        heading: 'Nouvelles opportunités pour téléprospecteurs',
+        text: (
+            <>
+                Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences.<br />
+                Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.
+            </>
+        ),
         benefits: [
-            'Accès Rapide aux Offres : Des nouvelles missions publiées quotidiennement.',
-            'Visibilité Maximale : Un profil optimisé pour attirer les recruteurs.',
-            'Évaluations et Commentaires : Construisez votre réputation avec des retours d’expériences.'
+            'Accès rapide aux offres : Des nouvelles missions publiées quotidiennement.',
+            'Visibilité maximale : Un profil optimisé pour attirer les recruteurs.',
+            'Évaluations et commentaires : Construisez votre réputation avec des retours d’expériences.'
         ],
         cta: 'Inscrivez-vous maintenant et trouvez votre prochaine mission !'
     });
@@ -18,12 +23,17 @@ function Home() {
     const handleTeleprospecteursClick = () => {
         setSelectedOption('teleprospecteurs');
         setContent({
-            heading: 'Nouvelles Opportunités pour Téléprospecteurs',
-            text: 'Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences. Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.',
+            heading: 'Nouvelles opportunités pour téléprospecteurs',
+            text: (
+                <>
+                    Vous êtes téléprospecteur à la recherche de nouvelles missions ? Découvrez un vaste éventail d’offres adaptées à vos compétences.<br />
+                    Créez votre profil, mettez en avant vos atouts et laissez les entreprises vous trouver.
+                </>
+            ),
             benefits: [
-                'Accès Rapide aux Offres : Des nouvelles missions publiées quotidiennement.',
-                'Visibilité Maximale : Un profil optimisé pour attirer les recruteurs.',
-                'Évaluations et Commentaires : Construisez votre réputation avec des retours d’expériences.'
+                'Accès rapide aux offres : Des nouvelles missions publiées quotidiennement.',
+                'Visibilité maximale : Un profil optimisé pour attirer les recruteurs.',
+                'Évaluations et commentaires : Construisez votre réputation avec des retours d’expériences.'
             ],
             cta: 'Inscrivez-vous maintenant et trouvez votre prochaine mission !'
         });
@@ -32,12 +42,12 @@ function Home() {
     const handleCommerciauxClick = () => {
         setSelectedOption('commerciaux');
         setContent({
-            heading: 'Avancez dans Votre Carrière Commerciale',
+            heading: 'Avancez dans votre carrière commerciale',
             text: 'En tant que commercial, vos compétences sont recherchées. Notre plateforme vous aide à trouver des missions qui correspondent à votre profil et à vos aspirations. Commencez à postuler à des offres dès aujourd\'hui.',
             benefits: [
-                'Offres Personnalisées : Des recommandations d’emplois basées sur votre expérience.',
-                'Postulez Rapidement : Un processus de demande simplifié.',
-                'Gestion des Candidatures : Suivez facilement l’évolution de vos demandes.'
+                'Offres personnalisées : Des recommandations d’emplois basées sur votre expérience.',
+                'Postulez rapidement : Un processus de demande simplifié.',
+                'Gestion des candidatures : Suivez facilement l’évolution de vos demandes.'
             ],
             cta: 'Créez votre profil dès aujourd’hui et boostez votre carrière !'
         });
@@ -46,12 +56,12 @@ function Home() {
     const handleRegiesClick = () => {
         setSelectedOption('regies');
         setContent({
-            heading: 'Trouvez les Meilleurs Talents',
+            heading: 'Trouvez les meilleurs talents',
             text: 'Les régies peuvent recruter les meilleurs téléprospecteurs et commerciaux grâce à notre plateforme. Publiez vos annonces et accédez à un large éventail de profils qualifiés. Utilisez nos outils pour affiner vos recherches et trouver les missions idéales.',
             benefits: [
-                'Publication Facile : Publiez vos offres rapidement.',
-                'Accès à des Profils Qualifiés : Explorez une base de données riche et diversifiée.',
-                'Outils de Filtrage : Trouvez les missions correspondant exactement à vos besoins.'
+                'Publication facile : Publiez vos offres rapidement.',
+                'Accès à des profils qualifiés : Explorez une base de données riche et diversifiée.',
+                'Outils de filtrage : Trouvez les missions correspondant exactement à vos besoins.'
             ],
             cta: 'Publiez votre première annonce dès aujourd’hui et commencez à interagir !'
         });
@@ -194,8 +204,8 @@ function Home() {
             </section>
 
             <section className="testimonials">
-                <h2 style={{textAlign: 'center', marginBottom:'10px'}}> Ce que nos utilisateurs disent de nous</h2>
-                <p style={{textAlign: 'center', marginBottom:'20px'}}>Ne prenez pas seulement notre parole pour acquise. Voici ce que nos utilisateurs satisfaits ont à dire sur leur expérience avec MarketLine.</p>
+                <h2 style={{textAlign: 'center', marginBottom:'15px'}}> Ce que nos utilisateurs disent de nous</h2>
+                <p style={{textAlign: 'center', marginBottom:'25px',fontSize:'18px'}}>Ne prenez pas seulement notre parole pour acquise. Voici ce que nos utilisateurs satisfaits ont à dire sur leur expérience avec MarketLine.</p>
                     <div className="container">
                         <div className="testimonial col">
                             <p style={{fontStyle: 'italic'}}>"Grâce à MarketLine, j'ai pu trouver plusieurs missions de téléprospection en quelques semaines seulement. L'interface est intuitive et j'ai reçu des propositions de qualité." </p> <br/> <b> Sarah M. , Téléprospectrice</b>
@@ -211,7 +221,7 @@ function Home() {
 
             <section className="advices">
                 <div className="advices__title">
-                    <h1>Nos étapes et astuces avec notre <br/> plateforme </h1>
+                    <h1>Nos étapes et astuces avec notre plateforme </h1>
                 </div>
                 <div className="container">
                     <div className="advice__card">
