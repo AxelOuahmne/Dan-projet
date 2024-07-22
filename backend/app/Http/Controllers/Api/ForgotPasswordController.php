@@ -43,12 +43,14 @@ class ForgotPasswordController extends Controller
                 ]);
             }
            
-            Mail::send('mail.password_reset', ['token' => $token], function ($message) use ($email) {
+            // $resetUrl = url('/reset-password/' . $token);
+            $resetUrl = 'http://localhost:3000/reset-password/' . $token;
+            Mail::send('mail.password_reset', ['url' => $resetUrl], function ($message) use ($email) {
                 $message->to($email);
-                $message->subject('RÃ©initialiser votre mot de passe');
+                $message->subject('Réinitialiser votre mot de passe');
             });
            
-            return response(['message' => 'VÃ©rifiez votre e-mail.'], 200);
+            return response(['message' => 'Vérifiez votre e-mail.'], 200);
         } catch(Exception $exception) {
             return response([
                 'message' => $exception->getMessage()
@@ -82,7 +84,5 @@ class ForgotPasswordController extends Controller
         return response([
            'message' => 'Password Change Successfully'
         ],200);
-
-
     }
 }

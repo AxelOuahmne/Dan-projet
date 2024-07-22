@@ -50,9 +50,10 @@ const LoginPage = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="btn">Login</button>
+                    <button type="submit" className="btn">Connexion</button>
                 </form>
-                <p>Don't have an account? <Link to="/register">Register</Link></p>
+                <p>Vous n'avez pas de compte ? <Link to="/register">Inscription</Link></p>
+                <p>Mot de passe oublié ? <Link to="/forgot-password">Réinitialiser</Link></p>
             </div>
         </div>
     );
