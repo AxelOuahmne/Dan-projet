@@ -3,6 +3,8 @@ import Home from '../pages/Home';
 import LoginPage from '../pages/Auth/LoginPage';
 import RegisterPage from '../pages/Auth/RegisterPage';
 import Layout from '../layouts/Layout';
+import ForgotPassword from '../pages/Auth/ForgotPassword';
+import ResetPassword from '../pages/Auth/ResetPassword';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,16 @@ const router = createBrowserRouter([
         path: '/register',
         element: <RegisterPage />,
       },
+      {
+        path: '/forgot-password',
+        element: <ForgotPassword />,
+      },
+      {
+        path: '/reset-password',
+        element: <ResetPassword />,
+      },
+      // <Route path="/forgot-password" element={<ForgotPassword />} />
+      // <Route path="/reset-password/:token" element={<ResetPassword />} />
 
     ],
   },
