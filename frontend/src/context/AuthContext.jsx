@@ -34,11 +34,12 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const register = async (name, email, password, password_confirmation) => {
+    const register = async (name, email,status, password, password_confirmation) => {
         try {
             await axios.post('http://127.0.0.1:8000/api/register', {
                 name,
                 email,
+                status,
                 password,
                 password_confirmation
             });

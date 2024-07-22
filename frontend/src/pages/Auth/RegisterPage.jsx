@@ -8,6 +8,7 @@ const RegisterPage = () => {
     const { register, isAuthenticated } = useContext(AuthContext);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [status, setStatus] = useState('Téléprospecteur');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const RegisterPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        register(name, email, password, passwordConfirmation).then(() => {
+        register(name, email, status,password, passwordConfirmation).then(() => {
             navigate('/');
         });
     };
@@ -51,6 +52,19 @@ const RegisterPage = () => {
                             placeholder="Email"
                             required
                         />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="status">Status</label>
+                        <select
+                            id="status"
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}
+                            required
+                        >
+                            <option value="Téléprospecteur">Téléprospecteur</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Régie">Régie</option>
+                        </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
