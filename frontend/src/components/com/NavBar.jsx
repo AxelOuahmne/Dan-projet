@@ -10,6 +10,7 @@ function NavBar() {
     <>
     <header>
         <div className="container">
+        <div className="burger-menu"><i className="fa-solid fa-bars-staggered"></i></div>
             <div className="logo">
                 <h1><a className="title" href="/"> MarketLine</a></h1>
             </div>
